@@ -1,0 +1,31 @@
+<div class="container">
+  <img class="container__image" src="assets/img/logo.png"/>
+  <div class="container__text">
+    &nbsp;&nbsp;<h2>Fitness Application</h2>
+  </div>
+</div>
+
+<div class ="navbar">
+<nav>
+      <button class="button" (click)="landingpage()">Home</button>
+      &nbsp;&nbsp;&nbsp;
+      <button class="button" (click)="placeAppointment()">Place Appointment</button>
+      &nbsp;&nbsp;&nbsp;
+      <button class="button" (click)="viewAppointment()">View Appointment</button>
+      &nbsp;&nbsp;&nbsp;
+      <button class="button" (click)="contactUspage()">Contact Us</button>
+</nav>
+</div>
+<br>
+
+
+<div class="sidebar">
+  <div class="left">
+    <button  class="button" (click)="landingpage()">Home</button><br><br>
+    <button  class="button" (click)="placeAppointment()">Place Appointment</button><br><br>
+    <button  class="button" (click)="viewAppointment()">View Appointment</button><br><br>
+    <button  class="button" (click)="contactUspage()">Contact Us</button>
+</div>
+<div class="right">
+  <router-outlet></router-outlet>
+</div>

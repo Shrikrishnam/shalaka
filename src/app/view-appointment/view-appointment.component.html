@@ -1,0 +1,43 @@
+<div class="container">
+        <h2 style="text-align:center;color:blue;">View Appointment...</h2>
+</div>
+    <table class="table table ordered table-hover" >
+        <thead>
+            
+            <th scope="col" class="h1">S1 NO</th>
+            <th scope="col" class="h2">Name</th>
+            <th scope="col" class="h3">Address</th>
+            <th scope="col" class="h4">City</th>
+            <th scope="col" class="h5">Package</th>
+            <th scope="col" class="h6">Trainer Preference</th>
+            <th scope="col" class="h7">Phone</th>
+          <td></td>
+          
+        </thead>
+        <tbody *ngIf="fitness?.length > 0">
+        <tr *ngFor="let fitness of fitness">
+            <td>{{fitness.id}}</td>
+            <td>{{fitness.firstname}} {{fitness.lastname}}</td>
+            <td>{{fitness.streetaddress}}</td>
+            <td>{{fitness.city}}</td>
+            <td>{{fitness.packages}}</td>
+            <td>{{fitness.trainerpreference}}</td>
+            <td>{{fitness.phonenumber}}</td>      
+            <td>
+                <button class="btn btn-info" (click)="edit(fitness.id)"
+                 type="button" name="edit" id="edit" >
+                    <i class="fa fa-edit"></i>
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-danger" type="button"  
+                (click)="delete(fitness.id)">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+
+
+
